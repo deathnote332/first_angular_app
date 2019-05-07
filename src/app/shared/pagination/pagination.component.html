@@ -1,0 +1,13 @@
+<div class="pagination-controls"> 
+  <span>
+    <button (click)="onClickNext()">Next</button>
+  </span>
+<ul>
+  <li *ngFor="let range of pageRange | async" (click)="onClickCurrent(range)">
+    {{ range }}
+  </li>
+</ul>
+  <span>
+    <button (click)="onClickPrevious()">Previous</button>
+  </span>
+</div>

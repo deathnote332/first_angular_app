@@ -1,0 +1,14 @@
+<div fxFlex="30">
+  <app-list-item [heroList]="_heroList | async"></app-list-item>
+  <app-pagination *ngIf="(_heroList | async)?.length"
+    [pageSize]="pageSize"
+    [pageLength]="pageLength"
+    (nextPage)="onClickNext($event)"
+    (selectedPage)="onSelectedPage($event)"
+    (previousPage)="onClickPrevious($event)"
+  >
+  </app-pagination>
+</div>
+<div fxFlex="70">
+  <router-outlet></router-outlet>
+</div>

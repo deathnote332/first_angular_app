@@ -1,0 +1,24 @@
+<div fxLayout="row" class="single-item" (click)="onClickItem()"> 
+  <div fxFlex="30">
+      <img [src]="hero.imageUrl" alt="" *ngIf="showImage">
+  </div>
+  <div fxFlex fxLayout="column" fxLayoutAlign="center start">
+      <div >
+          {{ hero.name }}
+      </div>
+      <div >
+          <label for="">Primary Atrribute</label>
+          {{ hero.primary_attr }}
+      </div>
+      <div >
+        <label for="">Attack Type</label>
+        {{ hero.attack_type }}
+    </div>
+    <div >
+        <label for="">Roles</label>
+        <ul>
+            <li *ngFor="let role of hero.roles">{{ role }}</li>
+        </ul>
+    </div>
+  </div>
+</div>
